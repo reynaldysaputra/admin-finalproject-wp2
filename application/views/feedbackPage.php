@@ -11,27 +11,23 @@
   </thead>
 
   <tbody>
+    <?php 
+      $a = 1; 
+      foreach ($feedback as $f) { ?>
     <tr>
-        <td>1</td>
-        <td>Reynaldy saputra</td>
-        <td>renalfrontend@gmail.com</td>
-        <td>Test</td>
-        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, tempora?</td>
+        <th><?= $a++;?></th>
+        <td><?= $f['nama_depan']." ".$f['nama_belakang']; ?></td>
+        <td><?= $f['email'];?></td>
+        <td><?= $f['subject'];?></td>
+        <td><?= $f['komentar'];?></td>
         <td>
-            <button type="button" class="btn btn-primary"><a href="mailto:renalfrontend@gmail.com">Balas</a></button>
-            <button type="button" class="btn btn-danger">Hapus</button>
+            <button type="button" class="btn btn-primary"><a href="mailto:<?=$f['email'];?>">Balas</a></button>
+            <button type="button" class="btn btn-danger"> 
+              <a href="<?= base_url('pages/hapusFeedback/').$f['id'];?>" onclick="return confirm('Anda yakin ingin menghapus feedback ini?');"> Hapus
+              </a>
+            </button>
         </td>
     </tr>
-    <tr>
-        <td>1</td>
-        <td>Reynaldy saputra</td>
-        <td>renalfrontend@gmail.com</td>
-        <td>Test</td>
-        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, tempora?</td>
-        <td>
-            <button type="button" class="btn btn-primary"><a href="mailto:renalfrontend@gmail.com">Balas</a></button>
-            <button type="button" class="btn btn-danger">Hapus</button>
-        </td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>

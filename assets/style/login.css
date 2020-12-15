@@ -1,0 +1,165 @@
+body {
+    margin: 0px;
+    background-image: url('../img/lautBackground.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ 
+ form {
+    display: grid;
+    grid-template-columns: 35%;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    height: 700px;
+ }
+ 
+ form #boxForm {
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.719);
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 10%;
+ }
+ 
+ form #boxForm img {
+    width: auto;
+    height: 150px;
+    position: absolute;
+    top: -65px;
+    left: 33%;
+ }
+ 
+ form #boxForm label {
+    position: absolute;
+    width: 100%;
+    height: 230px;
+    top: 120px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+ }
+ 
+ form #boxForm label input {
+    width: 90%;
+    height: 35px;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    border-bottom: 2.4px solid #2094AD;
+    color: white !important;
+    font-size: 20px;
+    font-family: sans-serif;
+ }
+ 
+ form #boxForm label input:first-child {
+    margin-bottom: 25px;
+ }
+ 
+ form #boxForm label button {
+    width: 30%;
+    height: 40px;
+    background-color: #2094AD;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    opacity: 0.8;
+    margin-top: 30px;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+ }
+ 
+ form #boxForm label button:hover {
+    background-color: transparent;
+ }
+ 
+ form #boxForm a {
+    position: absolute;
+    width: 100%;
+    top: 350px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+ }
+ 
+ form #boxForm a:hover {
+    text-decoration: underline;
+ }
+ 
+ /* Handle semua smartphone portrait */
+ @media only screen 
+    and (min-width:100px)
+    and (max-width:568px)
+    and (orientation:portrait){
+       form {
+          grid-template-columns: 90%;
+       }
+ 
+       form #boxForm label button {
+          width: 130px;
+       }
+ 
+       form #boxForm img {
+          left: 30%;
+       }
+ }
+ 
+ /* Handle smartphone Iphone5SE portrait */
+ @media only screen 
+    and (min-width:319px)
+    and (max-width:320px)
+    and (orientation:portrait){
+       form #boxForm img {
+          left: 25%;
+       }
+ }
+ 
+ /* Handle semua smartphone landscape */
+ @media only screen 
+    and (min-width:500px)
+    and (max-width:823px)
+    and (orientation:landscape){
+       form {
+          grid-template-columns: 90%;
+       }
+ 
+       form #boxForm img {
+          left: 35%;
+       }
+ }
+ 
+ /* Handle Iphone6/7/8/+++ */
+ @media only screen 
+    and (min-width:667px)
+    and (max-width:736px)
+    and (orientation:landscape){
+       form #boxForm img {
+          left: 40% !important;
+       }
+ }
+ 
+ /* Handle Iphone6/7/8 */
+ @media only screen 
+    and (min-width:666px)
+    and (max-width:667px)
+    and (orientation:landscape){
+       form #boxForm img {
+          left: 38%;
+       }
+ }
+ 
+ /* Handle Pixel1/2 */
+ @media only screen 
+    and (min-width:731px)
+    and (max-width:823px)
+    and (orientation:landscape){
+       form #boxForm img {
+          left: 40%;
+       }
+ }
+ 

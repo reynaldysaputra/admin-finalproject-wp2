@@ -1,0 +1,142 @@
+body {
+   margin: 0px;
+   padding: 0px;
+}
+
+.main {
+   width: 100%;
+   height: auto;
+   display: grid;
+   grid-template-columns: 25% 75%;
+}
+
+.main .sidebar1 {
+   width: 100%;
+   min-height: 100vh;
+   background-color: #6F42C2;
+}
+
+.main .sidebar1 .header {
+   width: 100%;
+   height: 10vh;
+   background-color: #F0ECF9;
+   padding: 0px;
+   text-align: center;
+}
+
+.main .sidebar1 .header h3{
+   margin: 0px;
+   line-height: 10vh;  
+   font-family: sans-serif;
+   font-size: 2rem;
+   color: #000000;
+}
+
+.main .sidebar1 .body {
+   width: 100%;
+   text-align: center;
+   margin-top: 5%;
+   font-family: sans-serif;
+}
+
+.main .sidebar1 .body a{
+   color: white;
+   text-decoration: none;
+   font-size: 1.3rem;
+   display: block;
+   margin-top: 2%;
+}
+
+.main .sidebar2 .header {
+   width: 100%;
+   height: 10vh;
+   background-color: #6F42C2;
+   padding: 0px;
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 30px;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+.main .sidebar2{
+   height: 100%;
+}
+
+.main .sidebar2 .body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 15px;
+   box-sizing: border-box;
+}
+
+.main .sidebar2 .logout{
+   line-height: 10vh;
+   text-decoration: none;
+   color: white;
+}
+
+table {
+   border-collapse: collapse;
+}
+
+.main .sidebar2 button {
+   margin-bottom: 3%;
+}
+
+.main .sidebar2 button a {
+   color: white;
+   text-decoration: none;
+}
+
+.main .sidebar2 button a:hover {
+   color: white;
+}
+
+.main .sidebar2 a:hover{
+   color: red;
+}
+
+@media
+only screen 
+and (max-width: 760px), (min-device-width: 768px) 
+and (max-device-width: 1024px)  {
+
+ /* Force table to not be like tables anymore */
+ table, thead, tbody, th, td, tr {
+    display: block;
+ }
+
+ /* Hide table headers (but not display: none;, for accessibility) */
+ thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+ }
+
+tr {
+ margin: 0 0 1rem 0;
+}
+ 
+tr:nth-child(odd) {
+ background: #ccc;
+}
+
+ td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+ }
+
+ td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+ }
+}

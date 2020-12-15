@@ -18,7 +18,7 @@
          <label>
             <?= $this->session->flashdata('pesan');?>
             <input type="text" placeholder="Masukan Email" name="email" value="<?= set_value('email');?>"><br>
-            <?= form_error('email','<medium class="text-danger pl-3" style="color:red;">','</medium>')?><br><br>
+            <?= form_error('email','<medium class="text-danger pl-3" style="color:red;">','</medium>')?>
             <input type="password" placeholder="Masukan Password" name="password"><br><br>
             <?= form_error('password','<medium class="text-danger pl-3" style="color:red;">','</medium>')?><br>
             <button type="submit">Login</button>
